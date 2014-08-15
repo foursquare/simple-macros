@@ -21,6 +21,8 @@ object CodeRef {
     reify { com.foursquare.macros.CodeRef(file.splice, line.splice) }
   }
 
+  implicit def materializeCodeRef: CodeRef = macro codeRefImpl
+
   // CODEREF: Macro for line number as an Int
   def LINE: Int = macro lineImpl
 

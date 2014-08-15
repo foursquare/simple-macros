@@ -4,7 +4,7 @@ import Keys._
 object BuildSettings {
   val buildSettings = Defaults.defaultSettings ++ Seq(
     organization := "com.foursquare",
-    version := "0.2",
+    version := "0.3",
     scalaVersion := "2.10.3",
     crossScalaVersions := Seq("2.10.3", "2.10.4"),
     resolvers += Resolver.sonatypeRepo("snapshots"),
