@@ -1,20 +1,13 @@
-*.class
-*.log
 .DS_Store
-*~
-
-# sbt specific
-.cache/
-.history/
-.lib/
-dist/*
-target/
-lib_managed/
-src_managed/
-project/boot/
-project/plugins/project/
-
-# Scala-IDE specific
-.scala_dependencies
-.worksheet
+.idea
+*.iml
+lib_managed
+project/boot/*
+project/build/target/*
+project/target/*
 .sbtlib
+target
+out
+*~
+*.swo
+*.swp
