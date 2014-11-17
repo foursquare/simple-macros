@@ -14,7 +14,7 @@ The project is compiled for Scala 2.10.4. In your build.sbt, add:
 ## How to use ##
 [API Documentation](http://foursquare.github.io/simple-macros/api)
 
-## Example ##
+## CodeRef Example ##
 ```scala
 import com.foursquare.macros.CodeRef
 import com.foursquare.macros.CodeRef._
@@ -33,6 +33,23 @@ def foo(bar: Int)(implicit caller: CodeRef) {
 foo(1)
 ```
 
+## Frame Example ##
+
+```scala
+import com.foursquare.macros.Frame._
+
+// Explicit call. here now contains the
+// standard StackTraceElement
+val here: StackTraceElement = FRAME
+
+// Implicit reference to caller.  Gives you the
+// StackTraceElement from which the method was called without
+// taking a stack trace.
+def foo(bar: Int)(implicit caller: StackTraceElement) {
+  println("called foo(" + bar + ") at " + caller)
+}
+foo(2)
+```
 
 ## Contributors ##
 - Jeff Jenkins

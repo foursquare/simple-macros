@@ -8,4 +8,8 @@ object ImplicitTestHelper {
   def testImplicit()(implicit caller: CodeRef): CodeRef = {
     caller
   }
+
+  def testFrameImplicit()(implicit caller: StackTraceElement): StackTraceElement = {
+    caller
+  }
 }
