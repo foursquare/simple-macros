@@ -72,11 +72,14 @@ object CodeRef {
   def fileImpl(c: Context): c.Expr[String] = {
     import c.universe.{Constant, Expr, Literal}
 
-    val absolute = c.enclosingPosition.source.file.file.toURI
-    val base = new File(".").toURI
+    val path = if (c.enclosingPosition.source.file.file != null) {
+      val base = new File(".").toURI
+      val absolute = c.enclosingPosition.source.file.file.toURI
+      base.relativize(absolute).getPath
+    } else {
+      ""
+    }
 
-    val path = Literal(Constant(base.relativize(absolute).getPath))
-
-    c.Expr[String](path)
+    c.Expr[String](Literal(Constant(path)))
   }
 }
