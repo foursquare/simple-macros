@@ -1,7 +1,6 @@
 # simple-macros #
 A collection of simple Scala [macros](http://docs.scala-lang.org/overviews/macros/overview.html)
 
-
 ## Adding simple macros to your build ##
 The project is compiled for Scala 2.10.4. In your build.sbt, add:
 
@@ -11,6 +10,9 @@ The project is compiled for Scala 2.10.4. In your build.sbt, add:
 ## How to build ##
     ./sbt compile
     ./sbt test
+
+## How to use ##
+[API Documentation](http://foursquare.github.io/simple-macros/api)
 
 ## Example ##
     import com.foursquare.macros.CodeRef
