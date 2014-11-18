@@ -47,6 +47,8 @@ credentials ++= {
   }
 }
 
+ivyConfigurations += config("default") extend(Compile)
+
 publishMavenStyle := true
 
 publishArtifact in Test := false
