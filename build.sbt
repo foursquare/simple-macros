@@ -1,6 +1,6 @@
 name := "simple-macros"
 
-version := "0.3"
+version := "0.4"
 
 organization := "com.foursquare"
 

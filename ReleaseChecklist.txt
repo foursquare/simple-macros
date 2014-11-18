@@ -1,0 +1,28 @@
+Pre-release checklist:
+
+  [ ] Update the documentation as necessary
+      [ ] ./sbt doc
+      [ ] git checkout gh-pages
+      [ ] mv target/scala-2.10/api api
+      [ ] git add api
+      [ ] git commit -a
+      [ ] git push origin gh-pages
+      [ ] git checkout master
+      [ ] update README.md with new example usage
+  [ ] Update README.md with latest version number
+  [ ] Update build.sbt with latest version number
+  [ ] ./sbt clean
+  [ ] ./sbt test
+  [ ] ./sbt console, copy example from README.md, make sure it works
+
+Release checklist:
+
+  [ ] ./sbt publishSigned
+  [ ] Find the simple-macros repository on oss.sonatype.org / Staging Repositories
+  [ ] Select it and click Close
+  [ ] Select it and click Release
+
+Post-release checklist:
+
+  [ ] Commit version changes
+  [ ] Push commits to Github
