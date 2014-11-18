@@ -1,3 +1,5 @@
+// Copyright 2014 Foursquare Labs Inc. All Rights Reserved.
+
 package com.foursquare.macros
 
 import java.io.File
