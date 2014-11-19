@@ -3,6 +3,7 @@ Pre-release checklist:
   [ ] Update the documentation as necessary
       [ ] ./sbt doc
       [ ] git checkout gh-pages
+      [ ] rm -r api
       [ ] mv target/scala-2.10/api api
       [ ] git add api
       [ ] git commit -a

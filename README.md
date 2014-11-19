@@ -4,7 +4,7 @@ A collection of simple Scala [macros](http://docs.scala-lang.org/overviews/macro
 ## Adding simple macros to your build ##
 The project is compiled for Scala 2.10.4. In your build.sbt, add:
 
-    "com.foursquare" %% "simple-macros" % "0.4"
+    "com.foursquare" %% "simple-macros" % "0.5"
 
 
 ## How to build ##
