@@ -1,1 +1,1 @@
-Index.PACKAGES = {"com" : [], "com.foursquare" : [], "com.foursquare.macros" : [{"object" : "com\/foursquare\/macros\/CodeRef$.html", "case class" : "com\/foursquare\/macros\/CodeRef.html", "name" : "com.foursquare.macros.CodeRef"}]};
+Index.PACKAGES = {"com" : [], "com.foursquare" : [], "com.foursquare.macros" : [{"object" : "com\/foursquare\/macros\/CodeRef$.html", "case class" : "com\/foursquare\/macros\/CodeRef.html", "name" : "com.foursquare.macros.CodeRef"}, {"object" : "com\/foursquare\/macros\/Frame$.html", "name" : "com.foursquare.macros.Frame"}]};
