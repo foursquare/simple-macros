@@ -1,29 +1,37 @@
 package com.foursquare.macros
 
 import scala.language.experimental.macros
+import scala.language.implicitConversions
 import scala.reflect.macros.Context
 
-object Frame {
+class StackElement(val stackTraceElement: StackTraceElement) {
+  /**
+   * Uses StackTraceElement's toString implementation
+   */
+  override def toString: String = stackTraceElement.toString
+}
+
+object StackElement {
   /**
    * Explicit macro call provides a case class with the file and line number
    * {{{
-   *  val here = FRAME
+   *  val here = STACKELEMENT
    * }}}
    */
-  def FRAME: StackTraceElement = macro frameImpl
+  def STACKELEMENT: StackElement = macro stackElementImpl
 
   /**
    * Implicit macro definiton provides a case class with the file and line number
    * useful for passing as an implicit reference to methods
    * {{{
-   *   def foo(bar: Int)(implicit caller: StackTraceElement) {
+   *   def foo(bar: Int)(implicit caller: StackElement) {
    *     println("called foo(" + bar + ") at " + caller)
    *   }
    * }}}
    */
-  implicit def materializeFrame: StackTraceElement = macro frameImpl
+  implicit def materializeStackElement: StackElement = macro stackElementImpl
 
-  def frameImpl(c: Context): c.Expr[StackTraceElement] = {
+  def stackElementImpl(c: Context): c.Expr[StackElement] = {
     import c.universe.{Constant, Expr, Literal, reify}
 
     def constExpr[T](value: T): Expr[T] = {
@@ -39,12 +47,20 @@ object Frame {
     }
     val file = c.enclosingUnit.source.file.name
     val line = c.enclosingPosition.line
-    reify { new StackTraceElement(
+    reify { new StackElement(new StackTraceElement(
       constExpr(clazz).splice,
       constExpr(method).splice,
       constExpr(file).splice,
       constExpr(line).splice
-    )}
+    ))}
   }
+
+  /**
+   * Converts from StackElement to StackTraceElement, since StackTraceElement is final
+   */
+  implicit def stackElement2StackTraceElement(stackElement: StackElement): StackTraceElement = {
+    stackElement.stackTraceElement
+  }
+
 }
 

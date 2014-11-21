@@ -17,7 +17,7 @@ libraryDependencies <++= (scalaVersion) { scalaVersion =>
 }
 
 
-scalacOptions ++= Seq("-deprecation", "-unchecked")
+scalacOptions ++= Seq("-deprecation", "-unchecked", "-feature")
 
 testFrameworks += new TestFramework("com.novocode.junit.JUnitFrameworkNoMarker")
 
