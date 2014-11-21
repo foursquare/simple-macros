@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Frame - com.foursquare.macros.Frame</title>
-          <meta name="description" content="Frame - com.foursquare.macros.Frame" />
-          <meta name="keywords" content="Frame com.foursquare.macros.Frame" />
+          <title>StackElement - com.foursquare.macros.StackElement</title>
+          <meta name="description" content="StackElement - com.foursquare.macros.StackElement" />
+          <meta name="keywords" content="StackElement com.foursquare.macros.StackElement" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
-            var hash = 'com.foursquare.macros.Frame$';
+            var hash = 'com.foursquare.macros.StackElement$';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,9 +24,9 @@
         </head>
         <body class="value">
       <div id="definition">
-        <img src="../../../lib/object_big.png" />
+        <a href="StackElement.html" title="Go to companion"><img src="../../../lib/object_to_class_big.png" /></a>
         <p id="owner"><a href="../../package.html" class="extype" name="com">com</a>.<a href="../package.html" class="extype" name="com.foursquare">foursquare</a>.<a href="package.html" class="extype" name="com.foursquare.macros">macros</a></p>
-        <h1>Frame</h1>
+        <h1><a href="StackElement.html" title="Go to companion">StackElement</a></h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,7 +35,7 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">Frame</span>
+        <span class="name">StackElement</span>
       </span>
       </h4>
       
@@ -59,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.foursquare.macros.Frame"><span>Frame</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.foursquare.macros.StackElement"><span>StackElement</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -150,22 +150,22 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.foursquare.macros.Frame#FRAME" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="FRAME:StackTraceElement"></a>
-      <a id="FRAME:StackTraceElement"></a>
+    </li><li name="com.foursquare.macros.StackElement#STACKELEMENT" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="STACKELEMENT:com.foursquare.macros.StackElement"></a>
+      <a id="STACKELEMENT:StackElement"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">FRAME</span><span class="result">: <span class="extype" name="java.lang.StackTraceElement">StackTraceElement</span></span>
+        <span class="name">STACKELEMENT</span><span class="result">: <a href="StackElement.html" class="extype" name="com.foursquare.macros.StackElement">StackElement</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Explicit macro call provides a case class with the file and line number</p><div class="fullcomment"><div class="comment cmt"><p>Explicit macro call provides a case class with the file and line number</p><pre><span class="kw">val</span> here = FRAME</pre></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+      <p class="shortcomment cmt">Explicit macro call provides a case class with the file and line number</p><div class="fullcomment"><div class="comment cmt"><p>Explicit macro call provides a case class with the file and line number</p><pre><span class="kw">val</span> here = STACKELEMENT</pre></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@macroImpl</span><span class="args">(<span>
       
-      <span class="defval" name="`macro`(&quot;versionFormat&quot; = 1, &quot;className&quot; = &quot;com.foursquare.macros.Frame$&quot;, &quot;methodName&quot; = &quot;frameImpl&quot;, &quot;signature&quot; = List(-1))">...</span>
+      <span class="defval" name="`macro`(&quot;versionFormat&quot; = 1, &quot;className&quot; = &quot;com.foursquare.macros.StackElement$&quot;, &quot;methodName&quot; = &quot;stackElementImpl&quot;, &quot;signature&quot; = List(-1))">...</span>
     </span>)</span>
               
         </dd></dl></div>
@@ -246,19 +246,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="com.foursquare.macros.Frame#frameImpl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="frameImpl(c:scala.reflect.macros.Context):c.Expr[StackTraceElement]"></a>
-      <a id="frameImpl(Context):scala.reflect.macros.Context.Expr[StackTraceElement]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">frameImpl</span><span class="params">(<span name="c">c: <span class="extype" name="scala.reflect.macros.Context">Context</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.macros.Aliases.Expr">scala.reflect.macros.Context.Expr</span>[<span class="extype" name="java.lang.StackTraceElement">StackTraceElement</span>]</span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -298,26 +285,26 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.foursquare.macros.Frame#materializeFrame" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="materializeFrame:StackTraceElement"></a>
-      <a id="materializeFrame:StackTraceElement"></a>
+    </li><li name="com.foursquare.macros.StackElement#materializeStackElement" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="materializeStackElement:com.foursquare.macros.StackElement"></a>
+      <a id="materializeStackElement:StackElement"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">implicit </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">materializeFrame</span><span class="result">: <span class="extype" name="java.lang.StackTraceElement">StackTraceElement</span></span>
+        <span class="name">materializeStackElement</span><span class="result">: <a href="StackElement.html" class="extype" name="com.foursquare.macros.StackElement">StackElement</a></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Implicit macro definiton provides a case class with the file and line number
 useful for passing as an implicit reference to methods</p><div class="fullcomment"><div class="comment cmt"><p>Implicit macro definiton provides a case class with the file and line number
-useful for passing as an implicit reference to methods</p><pre><span class="kw">def</span> foo(bar: <span class="std">Int</span>)(<span class="kw">implicit</span> caller: StackTraceElement) {
+useful for passing as an implicit reference to methods</p><pre><span class="kw">def</span> foo(bar: <span class="std">Int</span>)(<span class="kw">implicit</span> caller: StackElement) {
 println(<span class="lit">"called foo("</span> + bar + <span class="lit">") at "</span> + caller)
 }</pre></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@macroImpl</span><span class="args">(<span>
       
-      <span class="defval" name="`macro`(&quot;versionFormat&quot; = 1, &quot;className&quot; = &quot;com.foursquare.macros.Frame$&quot;, &quot;methodName&quot; = &quot;frameImpl&quot;, &quot;signature&quot; = List(-1))">...</span>
+      <span class="defval" name="`macro`(&quot;versionFormat&quot; = 1, &quot;className&quot; = &quot;com.foursquare.macros.StackElement$&quot;, &quot;methodName&quot; = &quot;stackElementImpl&quot;, &quot;signature&quot; = List(-1))">...</span>
     </span>)</span>
               
         </dd></dl></div>
@@ -360,6 +347,33 @@ println(<span class="lit">"called foo("</span> + bar + <span class="lit">") at "
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="com.foursquare.macros.StackElement#stackElement2StackTraceElement" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stackElement2StackTraceElement(stackElement:com.foursquare.macros.StackElement):StackTraceElement"></a>
+      <a id="stackElement2StackTraceElement(StackElement):StackTraceElement"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stackElement2StackTraceElement</span><span class="params">(<span name="stackElement">stackElement: <a href="StackElement.html" class="extype" name="com.foursquare.macros.StackElement">StackElement</a></span>)</span><span class="result">: <span class="extype" name="java.lang.StackTraceElement">StackTraceElement</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Converts from StackElement to StackTraceElement, since StackTraceElement is final
+</p>
+    </li><li name="com.foursquare.macros.StackElement#stackElementImpl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stackElementImpl(c:scala.reflect.macros.Context):c.Expr[com.foursquare.macros.StackElement]"></a>
+      <a id="stackElementImpl(Context):scala.reflect.macros.Context.Expr[StackElement]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stackElementImpl</span><span class="params">(<span name="c">c: <span class="extype" name="scala.reflect.macros.Context">Context</span></span>)</span><span class="result">: <span class="extype" name="scala.reflect.macros.Aliases.Expr">scala.reflect.macros.Context.Expr</span>[<a href="StackElement.html" class="extype" name="com.foursquare.macros.StackElement">StackElement</a>]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
