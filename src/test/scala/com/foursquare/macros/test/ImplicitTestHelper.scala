@@ -3,13 +3,14 @@
 package com.foursquare.macros.test
 
 import com.foursquare.macros.CodeRef
+import com.foursquare.macros.StackElement
 
 object ImplicitTestHelper {
   def testImplicit()(implicit caller: CodeRef): CodeRef = {
     caller
   }
 
-  def testFrameImplicit()(implicit caller: StackTraceElement): StackTraceElement = {
+  def testStackElementImplicit()(implicit caller: StackElement): StackTraceElement = {
     caller
   }
 }

@@ -33,21 +33,23 @@ def foo(bar: Int)(implicit caller: CodeRef) {
 foo(1)
 ```
 
-## Frame Example ##
+## StackElement Example ##
 
 ```scala
-import com.foursquare.macros.Frame._
+import com.foursquare.macros.StackElement
+import com.foursquare.macros.StackElement._
 
 // Explicit call. here now contains the
-// standard StackTraceElement
-val here: StackTraceElement = FRAME
+// standard StackTraceElement (implicit from StackElement -> StackTraceElement)
+scala> val here: StackTraceElement = STACKELEMENT
 
 // Implicit reference to caller.  Gives you the
 // StackTraceElement from which the method was called without
 // taking a stack trace.
-def foo(bar: Int)(implicit caller: StackTraceElement) {
+def foo(bar: Int)(implicit caller: StackElement) {
   println("called foo(" + bar + ") at " + caller)
 }
+
 foo(2)
 ```
 
