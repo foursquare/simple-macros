@@ -1,3 +1,11 @@
+## NOTICE - This project has moved.
+
+It is now part of Foursquare's open source monorepo [Fsq.io](https://github.com/foursquare/fsqio) and all
+future work will be published there.
+
+The project lives on but this Github repo is deprecated.
+
+
 # simple-macros #
 A collection of simple Scala [macros](http://docs.scala-lang.org/overviews/macros/overview.html)
 
